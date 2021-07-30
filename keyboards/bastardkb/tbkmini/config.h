@@ -58,3 +58,7 @@
 #    endif
 #    define RGB_MATRIX_KEYPRESSES
 #endif
+
+#define TAPPING_FORCE_HOLD
+#define IGNORE_MOD_TAP_INTERRUPT
+#define TAPPING_TERM 120
