@@ -30,7 +30,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [1] = LAYOUT_split_3x6_3(
     KC_GRV, KC_EXLM,   KC_AT, KC_HASH,  KC_DLR, KC_PERC,                         KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_BSPC,
     KC_DEL, XXXXXXX, XXXXXXX, XXXXXXX, KC_LCBR, KC_LBRC,                         KC_RBRC,  KC_RCBR, KC_LBRC, KC_RBRC, KC_BSLS,  KC_PIPE,
-    KC_LSFT, XXXXXXX, XXXXXXX, XXXXXXX, KC_EQL, KC_MINUS,                        KC_UNDS, KC_PLUS, KC_LCBR, KC_RCBR, KC_PIPE, KC_TILD,
+    KC_LSFT, XXXXXXX, XXXXXXX, KC_NO, KC_EQL, KC_MINUS,                        KC_UNDS, KC_PLUS, KC_LCBR, KC_RCBR, KC_PIPE, KC_TILD,
                                           KC_LGUI,   KC_TRNS,  KC_ENT,     KC_SPC,   MO(3), KC_RALT
   ),
 
@@ -44,7 +44,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [3] = LAYOUT_split_3x6_3(
     RGB_SAI, KC_NO, LCTL(KC_PGUP), KC_NO, LCTL(KC_PGDN), KC_NO,                      RGB_TOG, RGB_MOD, XXXXXXX, XXXXXXX, XXXXXXX, RGB_HUI,
     RGB_SAD, KC_NO, LCTL(KC_LEFT), KC_NO, LCTL(KC_RGHT), KC_NO,                      KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, RGB_HUD,
-    RESET  , KC_NO  , KC_NO  , KC_NO  , KC_NO  , KC_NO  ,                      KC_MRWD, KC_MFFD, KC_VOLD, KC_VOLU, KC_MPLY, KC_NO,
+    RESET  , KC_NO  , KC_NO  , KC_NO  , KC_NO  , KC_NO  ,                      KC_MRWD, KC_MFFD, KC_VOLD, KC_VOLU, KC_MPLY, BL_TOGG,
                                           KC_LGUI,   KC_TRNS,  KC_ENT,     KC_SPC,   KC_TRNS, KC_RALT
   )
 };
@@ -152,3 +152,16 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   return true;
 }
 #endif // OLED_DRIVER_ENABLE
+
+/* LEADER_EXTERNS(); */
+/* void matrix_scan_user(void) { */
+/*   LEADER_DICTIONARY() { */
+/*     leading = false; */
+/*     leader_end(); */
+/*     // Replace the sequences below with your own sequences. */
+/*     SEQ_ONE_KEY(KC_T) { */
+/*       // When I press KC_LEAD and then T, this sends CTRL + SHIFT + T */
+/*       SEND_STRING(SS_LCTRL(SS_LSFT("t"))); */
+/*     } */
+/*   } */
+/* } */
