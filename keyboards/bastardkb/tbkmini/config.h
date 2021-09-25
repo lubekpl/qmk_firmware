@@ -44,7 +44,9 @@
 #define LOCKING_RESYNC_ENABLE
 #define F_SCL 400000L
 #define USB_POLLING_INTERVAL_MS 1
-#define MASTER_RIGHT
+#define MASTER_LEFT
+
+#define LEADER_TIMEOUT 300
 
 // RGB matrix support
 #ifdef RGB_MATRIX_ENABLE
