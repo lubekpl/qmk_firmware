@@ -51,6 +51,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     RGB_SAI, KC_NO, LCTL(KC_PGUP), KC_NO, LCTL(KC_PGDN), KC_NO,                      RGB_TOG, RGB_MOD, XXXXXXX, XXXXXXX, XXXXXXX, RGB_HUI,
     RGB_SAD, KC_NO, LCTL(KC_LEFT), KC_NO, LCTL(KC_RGHT), KC_NO,                      KC_NO, TO(0), TO(1), KC_NO, KC_NO, RGB_HUD,
     RESET  , KC_NO  , KC_NO  , KC_NO  , KC_NO  , KC_NO  ,                      KC_MRWD, KC_MFFD, KC_VOLD, KC_VOLU, KC_MPLY, KC_NO,
-                                          KC_LGUI,   KC_TRNS,  KC_ENT,     KC_SPC,   KC_TRNS, KC_RALT
+                                          MO(5),   KC_TRNS,  KC_ENT,     KC_SPC,   KC_TRNS, KC_RALT
+  )
+  [5] = LAYOUT_split_3x6_3(
+    KC_NO, KC_NO, KC_NO, KC_MS_U, KC_NO, KC_NO,                      KC_NO,KC_NO, KC_NO, KC_NO,KC_NO, KC_ACL0,
+    KC_NO, KC_NO, KC_MS_L, KC_MS_D, KC_MS_R, KC_NO,                      KC_NO, KC_BTN1, KC_BTN2, KC_NO, KC_NO, KC_ACL1,
+    KC_NO  , KC_NO  , KC_NO  , KC_NO  , KC_NO  , KC_NO  ,                      KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_ACL2,
+                                          KC_TRNS,   KC_TRNS,  KC_ENT,     KC_SPC,   KC_TRNS, KC_RALT
   )
 };
