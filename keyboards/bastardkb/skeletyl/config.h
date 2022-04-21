@@ -29,7 +29,7 @@
 #define MATRIX_ROW_PINS { B5, F7, F6, B6 }
 #define MATRIX_COL_PINS { E6, C6, B1, B3, B2 }
 
-#define DIODE_DIRECTION ROW2COL
+#define DIODE_DIRECTION COL2ROW
 
 #define RGB_DI_PIN D2
 #define RGBLED_NUM 36
@@ -41,6 +41,10 @@
 #define SOFT_SERIAL_PIN D0
 
 #define MASTER_RIGHT
+
+#define TAPPING_FORCE_HOLD
+#define IGNORE_MOD_TAP_INTERRUPT
+#define TAPPING_TERM 150
 
 // RGB matrix support
 #ifdef RGB_MATRIX_ENABLE
