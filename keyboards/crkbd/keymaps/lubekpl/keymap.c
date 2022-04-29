@@ -36,23 +36,30 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [2] = LAYOUT_split_3x6_3(
     KC_GRV, KC_EXLM,   KC_AT, KC_HASH,  KC_DLR, KC_PERC,                         KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_BSPC,
-    KC_DEL, XXXXXXX, XXXXXXX, XXXXXXX, KC_LCBR, KC_LBRC,                         KC_RBRC,  KC_RCBR, KC_LBRC, KC_RBRC, KC_BSLS,  KC_PIPE,
-    KC_LSFT, XXXXXXX, XXXXXXX, KC_NO, KC_EQL, KC_MINUS,                        KC_UNDS, KC_PLUS, KC_LCBR, KC_RCBR, KC_PIPE, KC_TILD,
-                                          KC_LGUI,   KC_TRNS,  KC_ENT,     KC_SPC,   MO(4), KC_RALT
+    KC_DEL, XXXXXXX, KC_GRV, KC_QUOTE, KC_LCBR, KC_LBRC,                         KC_RBRC,  KC_RCBR, KC_DQUO, KC_TILD, KC_BSLS,  KC_PIPE,
+    KC_LSFT, XXXXXXX, XXXXXXX, XXXXXXX, KC_EQL, KC_MINUS,                        KC_UNDS, KC_PLUS, KC_LCBR, KC_RCBR, KC_PIPE, KC_TILD,
+                                          KC_LGUI,   KC_TRNS,  KC_ENT,     KC_BSPC,   MO(4), KC_RALT
   ),
 
   [3] = LAYOUT_split_3x6_3(
     KC_TILD,    KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                         KC_6,    KC_7,    KC_8,    KC_9,    KC_0, KC_BSPC,
-    KC_DEL, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      KC_LEFT, KC_DOWN,   KC_UP,KC_RIGHT, XXXXXXX, XXXXXXX,
-    KC_LSFT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-                                          KC_LGUI,   MO(4),  KC_ENT,     KC_SPC,   KC_TRNS, KC_RALT
+    KC_DEL, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      KC_LEFT, KC_DOWN,   KC_UP,KC_RIGHT, XXXXXXX, KC_NO,
+    KC_LSFT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_TAB,                      KC_LEAD, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_NO,
+                                          KC_DEL,   MO(4),  KC_LGUI,     KC_SPC,   KC_TRNS, KC_RALT
   ),
 
   [4] = LAYOUT_split_3x6_3(
     RGB_SAI, KC_NO, LCTL(KC_PGUP), KC_NO, LCTL(KC_PGDN), KC_NO,                      RGB_TOG, RGB_MOD, XXXXXXX, XXXXXXX, XXXXXXX, RGB_HUI,
-    RGB_SAD, KC_NO, LCTL(KC_LEFT), KC_NO, LCTL(KC_RGHT), KC_NO,                      KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, RGB_HUD,
-    RESET  , KC_NO  , KC_NO  , KC_NO  , KC_NO  , KC_NO  ,                      KC_MRWD, KC_MFFD, KC_VOLD, KC_VOLU, KC_MPLY, BL_TOGG,
-                                          KC_LGUI,   KC_TRNS,  KC_ENT,     KC_SPC,   KC_TRNS, KC_RALT
+    RGB_SAD, KC_NO, LCTL(KC_LEFT), KC_NO, LCTL(KC_RGHT), KC_NO,                      KC_NO, TO(0), TO(1), KC_NO, KC_NO, RGB_HUD,
+    RESET  , KC_NO  , KC_NO  , KC_NO  , KC_NO  , KC_NO  ,                      KC_MRWD, KC_MFFD, KC_VOLD, KC_VOLU, KC_MPLY, KC_NO,
+                                          MO(5),   KC_TRNS,  KC_ENT,     KC_SPC,   KC_TRNS, KC_RALT
+  ),
+
+  [5] = LAYOUT_split_3x6_3(
+    KC_NO, KC_NO, KC_NO, KC_MS_U, KC_NO, KC_NO,                      KC_NO,KC_NO, KC_NO, KC_NO,KC_NO, KC_ACL0,
+    KC_NO, KC_NO, KC_MS_L, KC_MS_D, KC_MS_R, KC_NO,                      KC_NO, KC_BTN1, KC_BTN2, KC_NO, KC_NO, KC_ACL1,
+    KC_NO  , KC_NO  , KC_NO  , KC_NO  , KC_NO  , KC_NO  ,                      KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_ACL2,
+                                          KC_TRNS,   KC_TRNS,  KC_ENT,     KC_SPC,   KC_TRNS, KC_RALT
   )
 };
 
